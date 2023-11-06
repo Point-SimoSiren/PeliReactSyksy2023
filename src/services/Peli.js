@@ -9,4 +9,10 @@ const getAll = () => {
     return request.then(response => response.data)
 }
 
-export default {getAll}
+// Uuden luontiin käytettävä http pyyntö
+const create = (peli) => {
+    const request = Axios.post(baseUrl, peli)
+    return request.then(response => response)
+}
+
+export default {getAll, create}

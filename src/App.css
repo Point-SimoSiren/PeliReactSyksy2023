@@ -1,3 +1,40 @@
+.peli-div {
+background-color: greenyellow;
+width: 35%;
+margin: auto;
+border-radius: 10px;
+padding: 1px;
+border-style: solid;
+border-color: darkgreen;
+margin-bottom: 5px;
+}
+
+.add-div {
+background-color: greenyellow;
+width: 20%;
+margin: auto;
+border-radius: 10px;
+padding: 10px;
+border-style: solid;
+border-color: darkgreen;
+margin-bottom: 5px;
+}
+
+.poisto-btn {
+  margin-top: 2px;
+  border-radius: 5px;
+  padding: 5px;
+  min-width: 30px;
+  transform: translateX(550%);    
+}
+
+.add-btn {
+  margin-bottom: 5px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+
 .App {
   text-align: center;
 }
