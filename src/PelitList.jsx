@@ -14,6 +14,23 @@ useEffect(() => {
     .then(data => setPelit(data))
 } , [])
 
+//// DELETE NAPIN TAPAHTUMANKÄSITTELIJÄ FUNKTIO (saa parametriksi koko peli olion) /////
+const deleteGame = (peli) => {
+    let answer = window.confirm("Poistetaanko peli: " + peli.nimi)
+    if (answer === false){
+        return;
+    }
+    else {
+        PeliService.remove(peli.peliId)
+        .then(res => {
+            alert(res)
+            window.location.reload()
+        }
+            )
+    }
+}
+
+
 return(
     <div>
             <button className="add-btn" onClick={() => setAdding(true)}>
@@ -23,13 +40,14 @@ return(
 
             {pelit && pelit.map(p => 
                 <div key={p.id} className="peli-div">
-                    <button className="poisto-btn">X</button>
+
+                    <button onClick={() => deleteGame(p)} className="poisto-btn">X</button>
+                   
                     <h3>{p.nimi}</h3>
                     <h5>Tekijä: {p.tekijä}</h5>
                     <p>Julkastu: {p.julkaisuvuosi}</p>
                 </div>
                 )}
-
     </div>
 )
 

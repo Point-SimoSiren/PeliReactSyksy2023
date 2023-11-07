@@ -15,4 +15,10 @@ const create = (peli) => {
     return request.then(response => response)
 }
 
-export default {getAll, create}
+// Poisto
+const remove = (id) => {
+    const request = Axios.delete(baseUrl + "/" + id)
+    return request.then(response => response.data)
+}
+
+export default {getAll, create, remove}
