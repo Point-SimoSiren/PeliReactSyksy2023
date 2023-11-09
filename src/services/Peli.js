@@ -15,7 +15,7 @@ const create = (peli) => {
     return request.then(response => response)
 }
 
-// Poisto
+// Poisto ///////////////////////////////
 const remove = (id) => {
     const request = Axios.delete(baseUrl + "/" + id)
     return request.then(response => response.data)
